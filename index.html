@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saomi Tasks</title>
+
+    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<!---
+     1.Task Name
+     2.Category(text or dropdown)
+     3.Deadline (a date)
+     4.Status (dropdown with a fixed "in progress" bar)
+   ---->
+
+<body>
+    <h1>Saomi Tasks</h1> <!--Title of app-->
+
+
+    <main> <!---Main body of the Saomi App tasks-->
+
+        <form> <!---Field 1 tasks names-->
+            
+                    <!---For Type of Task--->
+            <div class="taskn"> 
+                <label for="taskName">Task Name:</label>
+                <input type="text" id="taskName" name="taskName">
+            </div>
+
+
+                    <!---For category--->
+            <div class="categor"> 
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category">
+            </div>
+
+
+
+                     <!---Deadlines--->
+            <div class="deadl">
+                <label for="deadline">Deadline:</label>
+                <input type="date" id="deadline" name="deadline">
+            </div>
+
+
+                    <!---For current Status--->
+            <div class="taskStatus"> 
+                <label for="taskStatus">Status:</label>
+                <select id="taskStatus" name="taskStatus">
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                </select>
+            </div>
+
+
+            <button class="submit" id="submit" type="button">Submit Your Task</button>
+        </form>
+        <label for="taskFilter">Filter By:</label>
+        <select id="taskFilter" name="taskFilter">
+            <option value="All">All</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Overdue">Overdue</option>
+            <option value="Completed">Completed</option>
+        </select>
+        
+        <ul id =taskList></ul>
+
+    </main>
+
+
+</body>
+
+</html>
