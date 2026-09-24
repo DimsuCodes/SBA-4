@@ -18,6 +18,7 @@ submit.addEventListener("click", function () {
         deadline: deadline.value,
         status: taskStatus.value,
     };
+    
     tasks.push(task);
     saveTasks();
     renderTasks();
@@ -43,13 +44,22 @@ function renderTasks() {
         }
 
         const li = document.createElement("li");
-        let button = document.createElement("button");
-        button.textContent = "Mark Complete";
+        const statusSelect = document.createElement("select");
+         ["In Progress", "Completed"].forEach(function(statusOption){
+            const option = document.createElement("option");
+            option.value = statusOption;
+            option.textContent = statusOption;
+            if (statusOption === task.status) {
+                option.selected = true;
+            }
+            statusSelect.appendChild(option);
+         });
+        
         li.textContent = `${task.name} + ${task.category} + ${task.deadline} + ${task.status}`;
         taskList.appendChild(li);
-        li.appendChild(button);
-        button.addEventListener("click", function () {
-            task.status = "Completed";
+        li.appendChild(statusSelect);
+        statusSelect.addEventListener("change", function () {
+            task.status = statusSelect.value;
             saveTasks();
             renderTasks();
         });

@@ -1,0 +1,126 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eaf6ff;
+    font-family: "Outfit", sans-serif;
+    padding: 30px 0;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 40px;
+    color: #5eb3e4;
+    text-shadow: 2px 2px rgba(94, 179, 228, 0.3);
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f5fbff;
+    padding: 20px 43px;
+    border-radius: 24px;
+    box-shadow: 4px 4px 12px 2px rgba(94, 179, 228, 0.3);
+    border: 2px solid #bfe4fb;
+    width: 280px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 13px;
+    color: #2a7bb0;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+input, select {
+    border-radius: 10px;
+    border: 1px solid #bfe4fb;
+    padding: 8px;
+    font-family: "Outfit", sans-serif;
+    font-size: 14px;
+}
+
+.submit {
+    margin-top: 6px;
+    padding: 10px;
+    border-radius: 14px;
+    background-color: #8fd3f4;
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer; 
+    width: 150px;
+    margin: auto
+}
+
+.submit:hover {
+    background-color: #5eb3e4;
+   
+}
+
+label[for="taskFilter"] {
+    margin-top: 16px;
+    margin-bottom: 6px;
+}
+
+#taskFilter {
+    margin-bottom: 16px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f5fbff;
+    border-radius: 24px;
+    box-shadow: 4px 4px 12px 2px rgba(94, 179, 228, 0.3);
+    border: 2px solid #bfe4fb;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 16px;
+    width: 340px;
+}
+
+ul::-webkit-scrollbar {
+    width: 8px;
+    display: none;
+}
+
+ul::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+ul::-webkit-scrollbar-thumb {
+    background-color: #bfe4fb;
+    border-radius: 4px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #bfe4fb;
+    border-radius: 18px;
+    padding: 10px 14px;
+    background-color: white;
+    font-size: 13px;
+}
+
+li select {
+    font-size: 12px;
+    padding: 4px;
+}
+
+#taskFilter {
+ display:flex;
+ 
+}
